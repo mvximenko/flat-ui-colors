@@ -10,7 +10,6 @@ class Palette extends Component {
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
-
   changeLevel(level) {
     this.setState({level: level})
     console.log(level)
@@ -18,7 +17,6 @@ class Palette extends Component {
   changeFormat(value) {
     this.setState({ format: value })
   }
-
   render() {
     const { colors, paletteName, emoji, id } = this.props.palette;
     const { level, format } = this.state;
@@ -28,6 +26,7 @@ class Palette extends Component {
         name={color.name} 
         key={color.id} 
         moreUrl={`/palette/${id}/${color.id}`}
+        showLink
       />
     ))
     return(
