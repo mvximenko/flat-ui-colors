@@ -13,7 +13,7 @@
 }
 
 .ColorBox.go-back {
-  background-color: black;
+    background-color: black;
 }
 
 .copy-button,
@@ -34,11 +34,11 @@
     color: white;
     text-transform: uppercase;
     border: none;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .copy-button {
-  opacity: 0;
+    opacity: 0;
 }
 
 .ColorBox:hover .copy-button {
@@ -56,6 +56,14 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+.light-text {
+    color: white;
+}
+
+.ColorBox .dark-text {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .see-more {
