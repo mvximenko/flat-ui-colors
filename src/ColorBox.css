@@ -1,18 +1,18 @@
-.ColorBox {
+/*.ColorBox {
     width: 20%;
     height: 25%;
     margin: 0 auto;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    margin-bottom: -5px; /* Hides spaces between rows 3.5px -- -4px */
+    margin-bottom: -5px; 
 }
 
 .SingleColorPalette .ColorBox {
     height: 50%;
 }
 
-.ColorBox.go-back {
+.go-back {
     background-color: black;
 }
 
@@ -134,4 +134,4 @@
 .copy-msg p {
     font-size: 2rem;
     font-weight: 100;
-}
+}*/
