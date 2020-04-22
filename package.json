@@ -15,6 +15,7 @@
     "react-color": "^2.18.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
+    "react-material-ui-form-validator": "^2.0.10",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
