@@ -17,7 +17,8 @@
     "react-dom": "^16.13.1",
     "react-material-ui-form-validator": "^2.0.10",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-sortable-hoc": "^1.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
