@@ -14,54 +14,64 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 const drawerWidth = 400;
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    display: 'flex'
+    display: 'flex',
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
+      duration: theme.transitions.duration.leavingScreen,
     }),
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: '64px'
+    alignItems: 'center',
+    height: '64px',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
+      duration: theme.transitions.duration.enteringScreen,
+    }),
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 20
+    marginRight: 20,
   },
   navBtns: {
-
-  }
+    marginRight: '1rem',
+    '& a': {
+      textDecoration: 'none',
+    },
+  },
+  button: {
+    margin: '0 0.5rem',
+  },
 });
 
-class PaletteForNav extends Component {
+class PaletteFormNav extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      newPaletteName: ''
-    };
+    this.state = { newPaletteName: "", formShowing: false };
     this.handleChange = this.handleChange.bind(this);
+    this.showForm = this.showForm.bind(this);
   }
+
   handleChange(evt) {
     this.setState({
       [evt.target.name]: evt.target.value
     });
   }
+  showForm() {
+    this.setState({ formShowing: true });
+  }
   render() {
     const { classes, open, palettes, handleSubmit } = this.props;
     const { newPaletteName } = this.state;
     return (
-      <div classes={classes.root}> 
+      <div className={classes.root}>
         <CssBaseline />
         <AppBar
           position='fixed'
@@ -80,18 +90,34 @@ class PaletteForNav extends Component {
               <MenuIcon />
             </IconButton>
             <Typography variant='h6' color='inherit' noWrap>
-              Create Palette
-            </Typography> 
+              Create A Palette
+            </Typography>
           </Toolbar>
-          <div classes={classes.NavBtns}>
-              <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} />
-              <Link to='/'>
-                  <Button variant='contained' color='secondary'>Go Back</Button>
-                </Link>
-            </div>
-        </AppBar>     
+          <div className={classes.navBtns}>
+            <Link to='/'>
+              <Button
+                variant='contained'
+                color='secondary'
+                className={classes.button}
+              >
+                Go Back
+              </Button>
+            </Link>
+            <Button
+              variant='contained'
+              color='primary'
+              onClick={this.showForm}
+              className={classes.button}
+            >
+              Save
+            </Button>
+          </div>
+        </AppBar>
+        {this.state.formShowing && (
+          <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} />
+        )}
       </div>
-    )
+    );
   }
 }
-export default withStyles(styles, { withTheme: true })(PaletteForNav);
+export default withStyles(styles, { withTheme: true })(PaletteFormNav);
