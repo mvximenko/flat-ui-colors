@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import PaletteFormNav from './PaletteFormNav';
-import ColorPickerForm from './ColorPickerForm'
+import ColorPickerForm from './ColorPickerForm';
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -24,6 +24,7 @@ class NewPaletteForm extends Component {
       colors: this.props.palettes[0].colors
     };
     this.addNewColor = this.addNewColor.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.removeColor = this.removeColor.bind(this);
     this.clearColors = this.clearColors.bind(this);
@@ -44,16 +45,19 @@ class NewPaletteForm extends Component {
       newColorName: ''
     });
   }
-  clearColors() {
+  handleChange(evt) {
     this.setState({
-      colors: []
+      [evt.target.name]: evt.target.value
     });
+  }
+  clearColors() {
+    this.setState({ colors: [] });
   }
   addRandomColor() {
     const allColors = this.props.palettes.map(p => p.colors).flat();
     var rand = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[rand];
-    this.setState({ colors: [...this.state.colors, randomColor] })
+    this.setState({ colors: [...this.state.colors, randomColor] });
   }
   handleSubmit(newPalette) {
     newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
@@ -62,22 +66,24 @@ class NewPaletteForm extends Component {
     this.props.history.push('/');
   }
   removeColor(colorName) {
-  	this.setState({
-  		colors: this.state.colors.filter(color => color.name !== colorName)
-  	})
+    this.setState({
+      colors: this.state.colors.filter(color => color.name !== colorName)
+    });
   }
-  onSortEnd = ({oldIndex, newIndex}) => {
-    this.setState(({colors}) => ({
-      colors: arrayMove(colors, oldIndex, newIndex),
+  onSortEnd = ({ oldIndex, newIndex }) => {
+    this.setState(({ colors }) => ({
+      colors: arrayMove(colors, oldIndex, newIndex)
     }));
   };
+
   render() {
     const { classes, maxColors, palettes } = this.props;
     const { open, colors } = this.state;
     const paletteIsFull = colors.length >= maxColors;
+
     return (
       <div className={classes.root}>
-        <PaletteFormNav 
+        <PaletteFormNav
           open={open}
           palettes={palettes}
           handleSubmit={this.handleSubmit}
@@ -103,27 +109,27 @@ class NewPaletteForm extends Component {
               Design Your Palette
             </Typography>
             <div className={classes.buttons}>
-              <Button 
-                variant='contained' 
-                color='secondary' 
+              <Button
+                variant='contained'
+                color='secondary'
                 onClick={this.clearColors}
                 className={classes.button}
               >
                 Clear Palette
               </Button>
-              <Button 
-                variant='contained' 
+              <Button
+                variant='contained'
+                className={classes.button}
                 color='primary'
                 onClick={this.addRandomColor}
                 disabled={paletteIsFull}
-                className={classes.button}
               >
                 Random Color
               </Button>
             </div>
-            <ColorPickerForm 
-              paletteIsFull={paletteIsFull} 
-              addNewColor={this.addNewColor} 
+            <ColorPickerForm
+              paletteIsFull={paletteIsFull}
+              addNewColor={this.addNewColor}
               colors={colors}
             />
           </div>
@@ -134,9 +140,9 @@ class NewPaletteForm extends Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          <DraggableColorList 
-            colors={colors} 
-            removeColor={this.removeColor} 
+          <DraggableColorList
+            colors={colors}
+            removeColor={this.removeColor}
             axis='xy'
             onSortEnd={this.onSortEnd}
           />

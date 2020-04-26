@@ -9,7 +9,7 @@ const styles = {
     marginTop: '1rem',
     fontSize: '2rem'
   },
-  colorName: {
+  colorNameInput: {
     width: '100%',
     height: '70px'
   }
