@@ -56,8 +56,8 @@ class PaletteFormNav extends Component {
             >
               <AddToPhotosIcon />
             </IconButton>
-            <Typography variant='h6' color='inherit' noWrap>
-              Create A Palette
+            <Typography className={classes.title} variant='h6' color='inherit' noWrap>
+              Create Palette
             </Typography>
           </Toolbar>
           <div className={classes.navBtns}>
@@ -67,7 +67,7 @@ class PaletteFormNav extends Component {
                 color='secondary'
                 className={classes.button}
               >
-                Go Back
+                Back
               </Button>
             </Link>
             <Button
