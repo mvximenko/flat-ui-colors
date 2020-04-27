@@ -15,13 +15,13 @@ import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
   static defaultProps = {
-    maxColors: 20
+    maxColors: 20,
   };
   constructor(props) {
     super(props);
     this.state = {
       open: true,
-      colors: this.props.palettes[0].colors
+      colors: this.props.palettes[0].colors,
     };
     this.addNewColor = this.addNewColor.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -30,7 +30,6 @@ class NewPaletteForm extends Component {
     this.clearColors = this.clearColors.bind(this);
     this.addRandomColor = this.addRandomColor.bind(this);
   }
-
   handleDrawerOpen = () => {
     this.setState({ open: true });
   };
@@ -38,23 +37,22 @@ class NewPaletteForm extends Component {
   handleDrawerClose = () => {
     this.setState({ open: false });
   };
-
   addNewColor(newColor) {
     this.setState({
       colors: [...this.state.colors, newColor],
-      newColorName: ''
+      newColorName: '',
     });
   }
   handleChange(evt) {
     this.setState({
-      [evt.target.name]: evt.target.value
+      [evt.target.name]: evt.target.value,
     });
   }
   clearColors() {
     this.setState({ colors: [] });
   }
   addRandomColor() {
-    const allColors = this.props.palettes.map(p => p.colors).flat();
+    const allColors = this.props.palettes.map((p) => p.colors).flat();
     var rand = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[rand];
     this.setState({ colors: [...this.state.colors, randomColor] });
@@ -67,20 +65,18 @@ class NewPaletteForm extends Component {
   }
   removeColor(colorName) {
     this.setState({
-      colors: this.state.colors.filter(color => color.name !== colorName)
+      colors: this.state.colors.filter((color) => color.name !== colorName),
     });
   }
   onSortEnd = ({ oldIndex, newIndex }) => {
     this.setState(({ colors }) => ({
-      colors: arrayMove(colors, oldIndex, newIndex)
+      colors: arrayMove(colors, oldIndex, newIndex),
     }));
   };
-
   render() {
     const { classes, maxColors, palettes } = this.props;
     const { open, colors } = this.state;
     const paletteIsFull = colors.length >= maxColors;
-
     return (
       <div className={classes.root}>
         <PaletteFormNav
@@ -95,7 +91,7 @@ class NewPaletteForm extends Component {
           anchor='left'
           open={open}
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
         >
           <div className={classes.drawerHeader}>
@@ -136,7 +132,7 @@ class NewPaletteForm extends Component {
         </Drawer>
         <main
           className={classNames(classes.content, {
-            [classes.contentShift]: open
+            [classes.contentShift]: open,
           })}
         >
           <div className={classes.drawerHeader} />

@@ -13,37 +13,37 @@ class Palette extends Component {
     this.changeFormat = this.changeFormat.bind(this);
   }
   changeLevel(level) {
-    this.setState({level: level})
-    console.log(level)
+    this.setState({ level: level });
+    console.log(level);
   }
   changeFormat(value) {
-    this.setState({ format: value })
+    this.setState({ format: value });
   }
   render() {
     const { colors, paletteName, emoji, id } = this.props.palette;
     const { classes } = this.props;
     const { level, format } = this.state;
-    const colorBoxes = colors[level].map(color => (
-      <ColorBox 
-        background={color[format]} 
-        name={color.name} 
-        key={color.id} 
+    const colorBoxes = colors[level].map((color) => (
+      <ColorBox
+        background={color[format]}
+        name={color.name}
+        key={color.id}
         moreUrl={`/palette/${id}/${color.id}`}
         showingFullPalette
       />
-    ))
-    return(
-      <div className={classes.Palette}> 
-        <Navbar 
-          level={level} 
-          changeLevel={this.changeLevel} 
+    ));
+    return (
+      <div className={classes.Palette}>
+        <Navbar
+          level={level}
+          changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
           showingAllColors
         />
         <div className={classes.colors}>{colorBoxes}</div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
-    )
+    );
   }
 }
 export default withStyles(styles)(Palette);

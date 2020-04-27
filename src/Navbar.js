@@ -18,11 +18,11 @@ class Navbar extends Component {
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
   handleFormatChange(e) {
-      this.setState({ format: e.target.value, open: true });
-      this.props.handleChange(e.target.value);
+    this.setState({ format: e.target.value, open: true });
+    this.props.handleChange(e.target.value);
   }
   closeSnackbar() {
-    this.setState({ open: false })
+    this.setState({ open: false });
   }
   render() {
     const { level, changeLevel, showingAllColors, classes } = this.props;
@@ -47,34 +47,38 @@ class Navbar extends Component {
           </div>
         )}
         <div className={classes.selectContainer}>
-        <Select value={format} onChange={this.handleFormatChange}>
-          <MenuItem value='hex'>HEX - #ffffff</MenuItem>
-          <MenuItem value='rgb'>RGB - rbg(255,255,255)</MenuItem>
-          <MenuItem value='rgba'>RGB - rbga(255,255,255, 1.0)</MenuItem>
-        </Select>
+          <Select value={format} onChange={this.handleFormatChange}>
+            <MenuItem value='hex'>HEX - #ffffff</MenuItem>
+            <MenuItem value='rgb'>RGB - rbg(255,255,255)</MenuItem>
+            <MenuItem value='rgba'>RGB - rbga(255,255,255, 1.0)</MenuItem>
+          </Select>
         </div>
-        <Snackbar 
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} 
+        <Snackbar
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           open={this.state.open}
           autoHideDuration={3000}
-          message={<span id='message-id'>Format Changed To {format.toUpperCase()}</span>}
+          message={
+            <span id='message-id'>
+              Format Changed To {format.toUpperCase()}
+            </span>
+          }
           ContentProps={{
-            'aria-describedby': 'message-id'
+            'aria-describedby': 'message-id',
           }}
           onClose={this.closeSnackbar}
           action={[
-            <IconButton 
-              onClick={this.closeSnackbar} 
-              color='inherit' 
-              key='close' 
+            <IconButton
+              onClick={this.closeSnackbar}
+              color='inherit'
+              key='close'
               aria-label='close'
             >
               <CloseIcon />
-            </IconButton>
+            </IconButton>,
           ]}
         />
       </header>
     );
   }
 }
-export default withStyles(styles)(Navbar); 
+export default withStyles(styles)(Navbar);

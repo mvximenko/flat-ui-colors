@@ -2,10 +2,10 @@ export default {
   Palette: {
     height: '100vh',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   colors: {
-    height: '90%'
+    height: '90%',
   },
   goBack: {
     width: '20%',
@@ -34,7 +34,7 @@ export default {
       lineHeight: '30px',
       textTransform: 'uppercase',
       border: 'none',
-      textDecoration: 'none'
-    }
-  }
+      textDecoration: 'none',
+    },
+  },
 };

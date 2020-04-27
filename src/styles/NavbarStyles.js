@@ -3,7 +3,7 @@ export default {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    height: '6vh'
+    height: '6vh',
   },
   logo: {
     marginRight: '15px',
@@ -16,15 +16,15 @@ export default {
     alignItems: 'center',
     '& a': {
       textDecoration: 'none',
-      color: 'black'
-    }
+      color: 'black',
+    },
   },
   slider: {
     width: '340px',
     margin: '0 10px',
     display: 'inline-block',
     '& .rc-slider-track': {
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
     },
     '& .rc-slider-rail': {
       height: '8px',
@@ -36,11 +36,11 @@ export default {
       boxShadow: 'none',
       width: '13px',
       height: '13px',
-      marginTop: '-3px'
+      marginTop: '-3px',
     },
   },
   selectContainer: {
     marginLeft: 'auto',
-    marginRight: '1rem'
-  } 
+    marginRight: '1rem',
+  },
 };

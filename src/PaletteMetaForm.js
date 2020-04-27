@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from "@material-ui/core/DialogContent";
+import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
@@ -33,7 +33,7 @@ class PaletteMetaForm extends Component {
     });
   }
   showEmojiPicker() {
-    this.setState({ stage: 'emoji'});
+    this.setState({ stage: 'emoji' });
   }
   savePalette(emoji) {
     const newPalette = {
@@ -49,7 +49,6 @@ class PaletteMetaForm extends Component {
   handleClose = () => {
     this.setState({ open: false });
   };
-
   render() {
     const { newPaletteName } = this.state;
     const { hideForm, handleSubmit } = this.props;
@@ -67,12 +66,14 @@ class PaletteMetaForm extends Component {
           aria-labelledby='form-dialog-title'
           onClose={hideForm}
         >
-          <DialogTitle id='form-dialog-title'>Choose a Palette Name</DialogTitle>
+          <DialogTitle id='form-dialog-title'>
+            Choose a Palette Name
+          </DialogTitle>
           <ValidatorForm onSubmit={this.showEmojiPicker}>
             <DialogContent>
               <DialogContentText>
-                Please enter a name for your new beautiful palette. Make sure it's
-                unique!
+                Please enter a name for your new beautiful palette. Make sure
+                it's unique!
               </DialogContentText>
               <TextValidator
                 label='Palette Name'
