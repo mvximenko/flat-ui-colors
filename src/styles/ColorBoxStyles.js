@@ -8,7 +8,7 @@ export default {
     display: 'inline-block',
     position: 'relative',
     cursor: 'pointer',
-    marginBottom: '-5px', // Hide spaces between rows 3.5px -- -4px
+    marginBottom: '-5px',
     '&:hover button': {
       opacity: 1,
     },

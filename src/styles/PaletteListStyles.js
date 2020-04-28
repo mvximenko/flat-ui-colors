@@ -16,7 +16,7 @@ export default {
   heading: {
     fontSize: '2rem',
     [sizes.down('xs')]: {
-      fontSize: '1.2rem',
+      fontSize: '1.1rem',
     },
   },
   container: {
@@ -44,6 +44,7 @@ export default {
     },
   },
   palettes: {
+    paddingBottom: '3rem',
     boxSizing: 'border-box',
     width: '100%',
     display: 'grid',

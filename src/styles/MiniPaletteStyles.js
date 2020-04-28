@@ -1,7 +1,6 @@
 export default {
   root: {
     backgroundColor: 'white',
-    border: '1px solid black',
     borderRadius: '5px',
     padding: '0.5rem',
     position: 'relative',
@@ -25,12 +24,12 @@ export default {
     margin: 0,
     color: 'black',
     paddingTop: '0.5rem',
-    fontSize: '1rem',
+    fontSize: '0.9rem',
     position: 'relative',
   },
   emoji: {
     marginLeft: '0.5rem',
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
   },
   miniColor: {
     height: '25%',
@@ -38,7 +37,7 @@ export default {
     display: 'inline-block',
     margin: '0 auto',
     position: 'relative',
-    marginBottom: '-4.3px',
+    marginBottom: '-4.4px',
   },
   deleteIcon: {
     color: 'white',
