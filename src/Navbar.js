@@ -58,8 +58,8 @@ class Navbar extends Component {
           open={this.state.open}
           autoHideDuration={3000}
           message={
-            <span id='message-id'>
-              Format Changed To {format.toUpperCase()}
+            <span className={classes.messageId} id='message-id'>
+              Format Changed to {format.toUpperCase()}
             </span>
           }
           ContentProps={{

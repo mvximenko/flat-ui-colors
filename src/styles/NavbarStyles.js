@@ -50,4 +50,7 @@ export default {
     marginLeft: 'auto',
     marginRight: '1rem',
   },
+  messageId: {
+    fontSize: '1rem',
+  }
 };

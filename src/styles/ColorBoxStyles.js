@@ -31,23 +31,28 @@ export default {
   },
   colorName: {
     color: (props) =>
-      chroma(props.background).luminance() <= 0.08 ? 'white' : 'black',
+      chroma(props.background).luminance() <= 0.5
+        ? 'rgba(255, 255, 255, 0.9)'
+        : 'rgba(0, 0, 0, 0.7)',
+    fontSize: '0.9rem',
+    fontWeight: 500,
   },
   seeMore: {
     color: (props) =>
-      chroma(props.background).luminance() >= 0.7
+      chroma(props.background).luminance() >= 0.5
         ? 'rgba(0, 0, 0, 0.6)'
-        : 'white',
+        : 'rgba(255, 255, 255, 0.8)',
     background: 'rgba(255, 255, 255, 0.3)',
     position: 'absolute',
     border: 'none',
     right: 0,
     bottom: 0,
     width: '60px',
-    height: '30px',
+    height: '25px',
     textAlign: 'center',
-    lineHeight: '30px',
+    lineHeight: '25px',
     textTransform: 'uppercase',
+    fontWeight: 500,
   },
   copyButton: {
     color: (props) =>
@@ -77,9 +82,8 @@ export default {
     width: '100%',
     left: 0,
     bottom: 0,
-    padding: '10px',
+    padding: '0 0 5px 10px',
     color: 'black',
-    letterSpacing: '1px',
     textTransform: 'uppercase',
     fontSize: '12px',
   },
@@ -121,8 +125,8 @@ export default {
       padding: '1rem',
       textTransform: 'uppercase',
       [sizes.down('xs')]: {
-        fontSize: '6rem'
-      }
+        fontSize: '6rem',
+      },
     },
     '& p': {
       fontSize: '2rem',

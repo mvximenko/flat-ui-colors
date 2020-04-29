@@ -25,6 +25,7 @@ export default {
     color: 'black',
     paddingTop: '0.5rem',
     fontSize: '0.9rem',
+    fontWeight: '500',
     position: 'relative',
   },
   emoji: {

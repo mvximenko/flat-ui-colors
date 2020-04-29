@@ -5,11 +5,11 @@ export default {
 		display: 'flex',
 		justifyContent: 'flex-end',
 		alignItems: 'center',
-		fontSize: '1.1rem',
+		fontSize: '0.9rem',
 		fontWeight: 500,
 	},
 	emoji: {
-		fontSize: '1.5rem',
-		margin: '0 1rem',
+		fontSize: '1.1rem',
+		margin: '5px',
 	},
 };

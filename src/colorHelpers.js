@@ -6,7 +6,7 @@ function generatePalette(starterPalette) {
     paletteName: starterPalette.paletteName,
     id: starterPalette.id,
     emoji: starterPalette.emoji,
-    colors: {}
+    colors: {},
   };
   for (let level of levels) {
     newPalette.colors[level] = [];
@@ -22,28 +22,27 @@ function generatePalette(starterPalette) {
         rgba: chroma(scale[i])
           .css()
           .replace('rgb', 'rgba')
-          .replace(')', ',1.0)')
+          .replace(')', ',1.0)'),
       });
     }
+  }
+  for (let i = 0; i < newPalette.colors[500].length; i++) {
+    newPalette.colors[500][i].hex = starterPalette.colors[i].color;
+    newPalette.colors[500][i].rgb = chroma(
+      starterPalette.colors[i].color
+    ).css();
+    newPalette.colors[500][i].rgba = chroma(starterPalette.colors[i].color)
+      .css()
+      .replace('rgb', 'rgba')
+      .replace(')', ',1.0)');
   }
   return newPalette;
 }
 function getRange(hexColor) {
   const end = '#fff';
-  return [
-    chroma(hexColor)
-      .darken(1.4)
-      .hex(),
-    hexColor,
-    end
-  ];
+  return [chroma(hexColor).darken(1.4).hex(), hexColor, end];
 }
-
 function getScale(hexColor, numberOfColors) {
-  return chroma
-    .scale(getRange(hexColor))
-    .mode('lab')
-    .colors(numberOfColors);
+  return chroma.scale(getRange(hexColor)).mode('lab').colors(numberOfColors);
 }
-
 export { generatePalette };

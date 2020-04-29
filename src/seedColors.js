@@ -74,7 +74,7 @@ export default [
       { name: 'HollyHock', color: '#833471' },
       { name: 'RedPigment', color: '#EA2027' },
       { name: 'TurkishAqua', color: '#006266' },
-      { name: '20000LeaguesUnderTheSea', color: '#1B1464' },
+      { name: 'LeaguesUnderTheSea', color: '#1B1464' },
       { name: 'CircumorbitalRing', color: '#5758BB' },
       { name: 'MagentaPurple', color: '#6F1E51' },
     ],

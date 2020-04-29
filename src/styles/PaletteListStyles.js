@@ -41,7 +41,7 @@ export default {
   nav: {
     display: 'flex',
     width: '97%',
-    padding: '20px 0 30px 0',
+    padding: '30px 0',
     justifyContent: 'space-between',
     alignItems: 'center',
     color: 'white',
