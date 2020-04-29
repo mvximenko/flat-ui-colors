@@ -112,7 +112,7 @@ export default {
     justifyContent: 'center',
     flexDirection: 'column',
     fontSize: '4rem',
-    transform: 'scale(0.1)',
+    transform: 'scale(0.001)',
     opacity: 0,
     color: 'white',
     '& h1': {
