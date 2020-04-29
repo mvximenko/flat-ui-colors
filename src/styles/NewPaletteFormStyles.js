@@ -3,6 +3,7 @@ const drawerWidth = DRAWER_WIDTH;
 const styles = (theme) => ({
   root: {
     display: 'flex',
+    fontSize: '2rem',
   },
   drawer: {
     width: drawerWidth,

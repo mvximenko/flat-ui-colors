@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+div {
+  font-size: 0;
+}
+
 header,
 div,
 h1,

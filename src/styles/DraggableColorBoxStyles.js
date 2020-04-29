@@ -7,7 +7,6 @@ const styles = {
     display: 'inline-block',
     position: 'relative',
     cursor: 'pointer',
-    marginBottom: '-6px',
     '&:hover svg': {
       color: 'white',
       transform: 'scale(1.5)',
@@ -15,7 +14,6 @@ const styles = {
     [sizes.down('lg')]: {
       width: '25%',
       height: '20%',
-      marginBottom: '-4px',
     },
     [sizes.down('md')]: {
       width: '50%',

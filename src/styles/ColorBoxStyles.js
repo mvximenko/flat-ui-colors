@@ -8,7 +8,7 @@ export default {
     display: 'inline-block',
     position: 'relative',
     cursor: 'pointer',
-    marginBottom: '-5px',
+    fontSize: '1rem',
     '&:hover button': {
       opacity: 1,
     },

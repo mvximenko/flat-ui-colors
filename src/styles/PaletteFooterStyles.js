@@ -5,7 +5,8 @@ export default {
 		display: 'flex',
 		justifyContent: 'flex-end',
 		alignItems: 'center',
-		fontWeight: 'bold',
+		fontSize: '1.1rem',
+		fontWeight: 500,
 	},
 	emoji: {
 		fontSize: '1.5rem',

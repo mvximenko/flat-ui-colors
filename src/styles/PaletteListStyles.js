@@ -11,7 +11,6 @@ export default {
     },
   },
   root: {
-    backgroundColor: 'blue',
     height: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
@@ -23,10 +22,8 @@ export default {
     overflowY: 'auto',
   },
   heading: {
-    fontSize: '2rem',
-    [sizes.down('xs')]: {
-      fontSize: '1.1rem',
-    },
+    fontSize: '1.6rem',
+    letterSpacing: '2.5px',
   },
   container: {
     width: '55%',
@@ -44,12 +41,19 @@ export default {
   nav: {
     display: 'flex',
     width: '97%',
-    padding: '20px 0',
+    padding: '20px 0 30px 0',
     justifyContent: 'space-between',
     alignItems: 'center',
     color: 'white',
+    [sizes.down('xs')]: {
+      justifyContent: 'center',
+    },
     '& a': {
       color: 'white',
+      fontSize: '1rem',
+      [sizes.down('xs')]: {
+        display: 'none',
+      },
     },
   },
   palettes: {
