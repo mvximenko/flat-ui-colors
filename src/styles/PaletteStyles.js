@@ -7,7 +7,7 @@ export default {
     overflow: 'hidden',
   },
   colors: {
-    height: '90%',
+    height: '100%',
   },
   goBack: {
     width: '20%',

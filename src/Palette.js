@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
-import PaletteFooter from './PaletteFooter';
 import styles from './styles/PaletteStyles';
 
 class Palette extends Component {
@@ -41,7 +40,6 @@ class Palette extends Component {
           showingAllColors
         />
         <div className={classes.colors}>{colorBoxes}</div>
-        <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
     );
   }

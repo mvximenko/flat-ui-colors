@@ -96,8 +96,8 @@ class NewPaletteForm extends Component {
         />
         <Drawer
           className={classes.drawer}
-          variant="persistent"
-          anchor="left"
+          variant='persistent'
+          anchor='left'
           open={open}
           classes={{
             paper: classes.drawerPaper,
@@ -110,22 +110,22 @@ class NewPaletteForm extends Component {
           </div>
           <Divider />
           <div className={classes.container}>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant='h4' gutterBottom>
               Design Your Palette
             </Typography>
             <div className={classes.buttons}>
               <Button
-                variant="contained"
-                color="secondary"
+                variant='contained'
+                color='secondary'
                 onClick={this.clearColors}
                 className={classes.button}
               >
                 Clear Palette
               </Button>
               <Button
-                variant="contained"
+                variant='contained'
                 className={classes.button}
-                color="primary"
+                color='primary'
                 onClick={this.addRandomColor}
                 disabled={paletteIsFull}
               >
@@ -148,7 +148,7 @@ class NewPaletteForm extends Component {
           <DraggableColorList
             colors={colors}
             removeColor={this.removeColor}
-            axis="xy"
+            axis='xy'
             onSortEnd={this.onSortEnd}
             distance={20}
           />

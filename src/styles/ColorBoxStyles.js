@@ -42,7 +42,7 @@ export default {
       chroma(props.background).luminance() >= 0.5
         ? 'rgba(0, 0, 0, 0.6)'
         : 'rgba(255, 255, 255, 0.8)',
-    background: 'rgba(255, 255, 255, 0.3)',
+    background: 'rgba(255, 255, 255, 0.15)',
     position: 'absolute',
     border: 'none',
     right: 0,

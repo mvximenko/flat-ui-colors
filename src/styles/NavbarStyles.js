@@ -9,9 +9,9 @@ export default {
   logo: {
     marginRight: '15px',
     padding: '0 13px',
-    fontSize: '22px',
-    backgroundColor: '#eceff1',
+    fontSize: '1rem',
     fontFamily: 'Roboto',
+    fontWeight: 500,
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -34,9 +34,9 @@ export default {
       height: '8px',
     },
     '& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus, .rc-slider-handle:hover': {
-      backgroundColor: 'green',
+      backgroundColor: '#607D8B',
       outline: 'none',
-      border: '2px solid green',
+      border: '#607D8B',
       boxShadow: 'none',
       width: '13px',
       height: '13px',

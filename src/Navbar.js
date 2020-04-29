@@ -30,7 +30,7 @@ class Navbar extends Component {
     return (
       <header className={classes.Navbar}>
         <div className={classes.logo}>
-          <Link to='/'>React Palette</Link>
+          <Link to='/'>← Home</Link>
         </div>
         {showingAllColors && (
           <div>
@@ -49,8 +49,8 @@ class Navbar extends Component {
         <div className={classes.selectContainer}>
           <Select value={format} onChange={this.handleFormatChange}>
             <MenuItem value='hex'>HEX - #ffffff</MenuItem>
-            <MenuItem value='rgb'>RGB - rbg(255,255,255)</MenuItem>
-            <MenuItem value='rgba'>RGB - rbga(255,255,255, 1.0)</MenuItem>
+            <MenuItem value='rgb'>RGB - (255,255,255)</MenuItem>
+            <MenuItem value='rgba'>RGBA - (1,2,3, 0.4)</MenuItem>
           </Select>
         </div>
         <Snackbar
