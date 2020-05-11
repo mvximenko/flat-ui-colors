@@ -13,13 +13,12 @@ class Palette extends Component {
   }
   changeLevel(level) {
     this.setState({ level: level });
-    console.log(level);
   }
   changeFormat(value) {
     this.setState({ format: value });
   }
   render() {
-    const { colors, paletteName, emoji, id } = this.props.palette;
+    const { colors, id } = this.props.palette;
     const { classes } = this.props;
     const { level, format } = this.state;
     const colorBoxes = colors[level].map((color) => (
@@ -44,4 +43,5 @@ class Palette extends Component {
     );
   }
 }
+
 export default withStyles(styles)(Palette);

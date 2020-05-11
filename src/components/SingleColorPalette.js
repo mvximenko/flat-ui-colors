@@ -31,7 +31,7 @@ class SingleColorPalette extends Component {
   }
   render() {
     const { format } = this.state;
-    const { paletteName, emoji, id } = this.props.palette;
+    const { id } = this.props.palette;
     const { classes } = this.props;
     const colorBoxes = this._shades.map((color) => (
       <ColorBox
@@ -54,4 +54,5 @@ class SingleColorPalette extends Component {
     );
   }
 }
+
 export default withStyles(styles)(SingleColorPalette);

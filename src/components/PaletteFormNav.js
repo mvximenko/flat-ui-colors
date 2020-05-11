@@ -99,4 +99,5 @@ class PaletteFormNav extends Component {
     );
   }
 }
+
 export default withStyles(styles, { withTheme: true })(PaletteFormNav);

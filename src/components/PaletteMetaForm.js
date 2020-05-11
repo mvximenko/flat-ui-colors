@@ -100,4 +100,5 @@ class PaletteMetaForm extends Component {
     );
   }
 }
+
 export default PaletteMetaForm;

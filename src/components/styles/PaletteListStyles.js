@@ -1,5 +1,5 @@
 import sizes from './sizes';
-import bg from './bg.svg';
+import bg from '../../assets/bg.svg';
 export default {
   '@global': {
     '.fade-exit': {

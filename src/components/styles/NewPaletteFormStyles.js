@@ -1,4 +1,5 @@
-import { DRAWER_WIDTH } from '../constants';
+import { DRAWER_WIDTH } from '../../constants';
+
 const drawerWidth = DRAWER_WIDTH;
 const styles = (theme) => ({
   root: {
@@ -54,4 +55,5 @@ const styles = (theme) => ({
     width: '50%',
   },
 });
+
 export default styles;

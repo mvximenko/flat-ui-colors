@@ -81,4 +81,5 @@ class Navbar extends Component {
     );
   }
 }
+
 export default withStyles(styles)(Navbar);

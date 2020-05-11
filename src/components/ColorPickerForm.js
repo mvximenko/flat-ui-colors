@@ -89,4 +89,5 @@ class ColorPickerForm extends Component {
     );
   }
 }
+
 export default withStyles(styles)(ColorPickerForm);

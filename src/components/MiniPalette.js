@@ -41,4 +41,5 @@ class MiniPalette extends PureComponent {
     );
   }
 }
+
 export default withStyles(styles)(MiniPalette);

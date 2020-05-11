@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 import DraggableColorList from './DraggableColorList';
 import { arrayMove } from 'react-sortable-hoc';
 import styles from './styles/NewPaletteFormStyles';
-import seedColors from './seedColors';
+import seedColors from '../seedColors';
 
 class NewPaletteForm extends Component {
   static defaultProps = {
@@ -157,4 +157,5 @@ class NewPaletteForm extends Component {
     );
   }
 }
+
 export default withStyles(styles, { withTheme: true })(NewPaletteForm);

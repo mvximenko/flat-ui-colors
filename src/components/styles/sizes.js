@@ -1,5 +1,5 @@
 export default {
-  upd() {},
+  up() {},
   down(size) {
     const sizes = {
       xs: '575.98px',
