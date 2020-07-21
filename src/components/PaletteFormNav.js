@@ -69,7 +69,7 @@ class PaletteFormNav extends Component {
             </Typography>
           </Toolbar>
           <div className={classes.navBtns}>
-            <Link to='/'>
+            <Link to='/colors-app'>
               <Button
                 variant='contained'
                 color='secondary'

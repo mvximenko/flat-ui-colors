@@ -125,7 +125,7 @@ export default {
       padding: '1rem',
       textTransform: 'uppercase',
       [sizes.down('xs')]: {
-        fontSize: '6rem',
+        fontSize: '4rem',
       },
     },
     '& p': {
