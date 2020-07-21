@@ -52,5 +52,5 @@ export default {
   },
   messageId: {
     fontSize: '1rem',
-  }
+  },
 };

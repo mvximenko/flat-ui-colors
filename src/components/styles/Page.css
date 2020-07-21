@@ -14,3 +14,8 @@
 .page-exit-active {
   opacity: 0;
 }
+@media (max-width: 575.98px) {
+  .page {
+    position: static;
+  }
+}
