@@ -1,10 +1,14 @@
 import sizes from './sizes';
 export default {
   Palette: {
-    height: '100vh',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
+    [sizes.down('xs')]: {
+      display: 'block',
+      overflow: 'visible',
+    },
   },
   colors: {
     height: '100%',
