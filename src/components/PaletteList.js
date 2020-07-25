@@ -35,7 +35,7 @@ class PaletteList extends Component {
     this.setState({ openDeleteDialog: false, deletingId: '' });
   }
   goToPalette(id) {
-    this.props.history.push(`/colors-app/palette/${id}`);
+    this.props.history.push(`/palette/${id}`);
   }
   handleDelete() {
     this.props.deletePalette(this.state.deletingId);
@@ -48,8 +48,8 @@ class PaletteList extends Component {
       <div className={classes.root}>
         <div className={classes.container}>
           <nav className={classes.nav}>
-            <h1 className={classes.heading}>REACT COLORS</h1>
-            <Link to='/colors-app/palette/new'>Create Palette</Link>
+            <h1 className={classes.heading}>FLAT UI COLORS</h1>
+            <Link to='/palette/new'>Create Palette</Link>
           </nav>
           <TransitionGroup className={classes.palettes}>
             {palettes.map((palette) => (

@@ -53,7 +53,7 @@ class App extends Component {
               <Switch location={location}>
                 <Route
                   exact
-                  path='/colors-app/palette/new'
+                  path='/palette/new'
                   render={(routeProps) => (
                     <Page>
                       <NewPaletteForm
@@ -66,7 +66,7 @@ class App extends Component {
                 />
                 <Route
                   exact
-                  path='/colors-app/palette/:paletteId/:colorId'
+                  path='/palette/:paletteId/:colorId'
                   render={(routeProps) => (
                     <Page>
                       <SingleColorPalette
@@ -80,7 +80,7 @@ class App extends Component {
                 />
                 <Route
                   exact
-                  path='/colors-app'
+                  path='/'
                   render={(routeProps) => (
                     <Page>
                       <PaletteList
@@ -93,7 +93,7 @@ class App extends Component {
                 />
                 <Route
                   exact
-                  path='/colors-app/palette/:id'
+                  path='/palette/:id'
                   render={(routeProps) => (
                     <Page>
                       <Palette
