@@ -1,4 +1,4 @@
-# Flat UI Colors
+# Flat UI Colors 
 
 ### Clone of Flat UI Colors with additional features, built with
 
